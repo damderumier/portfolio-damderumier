@@ -67,3 +67,38 @@ nav a:hover {
 .btn:hover {
     transform: scale(1.1);
 }
+
+/* About section*/
+.about-me {
+    text-align: center;
+    padding: 20px;
+}
+
+.about-me p {
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+.skills, .fun-facts {
+    background: white;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.skills h2, .fun-facts h2 {
+    color: #ff4757;
+}
+
+.skills ul, .fun-facts ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li, .fun-facts li {
+    padding: 8px 0;
+    font-size: 1.1rem;
+}
