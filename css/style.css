@@ -105,69 +105,64 @@ nav a:hover {
 
 /*Contact*/
 .contact-form {
-    background: white;
+    text-align: center;
+    background: var(--card-bg);
     padding: 20px;
     max-width: 500px;
     margin: 20px auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px var(--shadow-color);
 }
 
 .contact-form label {
     display: block;
     font-weight: bold;
     margin: 10px 0 5px;
+    text-align: left;
 }
 
-.contact-form input, 
+.contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 10px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
+    padding: 12px;
+    border: 2px solid var(--shadow-color);
+    border-radius: 8px;
     font-size: 1rem;
+    box-sizing: border-box;
+    background: var(--card-bg);
+    color: var(--text-color);
+    outline: none;
 }
 
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--btn-bg);
+    box-shadow: 0 0 5px var(--btn-bg);
+}
+
+/* Bouton Envoyer */
 .contact-form button {
-    background: #ff4757;
+    background: var(--btn-bg);
     color: white;
-    padding: 10px 15px;
+    padding: 12px 15px;
     border: none;
     border-radius: 5px;
     margin-top: 10px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
 }
 
 .contact-form button:hover {
-    background: #e04050;
+    background: var(--btn-hover-bg);
     transform: scale(1.05);
 }
 
-.social-links {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.social-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.social-links li {
-    margin: 10px 0;
-}
-
-.social-links a {
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #222;
-    transition: color 0.3s;
-}
-
-.social-links a:hover {
-    color: #ff4757;
+/* Ajustements responsive */
+@media screen and (max-width: 500px) {
+    .contact-form {
+        width: 90%;
+    }
 }
 
 /* Animation */
