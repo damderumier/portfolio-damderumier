@@ -40,3 +40,31 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(section);
     });
 });
+
+// Dark mode
+document.addEventListener("DOMContentLoaded", () => {
+    const darkModeToggle = document.createElement("button");
+    darkModeToggle.innerText = "🌙 Mode Sombre";
+    darkModeToggle.classList.add("dark-mode-toggle");
+    document.body.appendChild(darkModeToggle);
+
+    // Vérifie si l'utilisateur a déjà activé le mode sombre
+    if (localStorage.getItem("darkMode") === "enabled") {
+        document.body.classList.add("dark-mode");
+        darkModeToggle.innerText = "☀️ Mode Clair";
+    }
+
+    // Ajoute un événement au bouton pour activer/désactiver le mode sombre
+    darkModeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        // Sauvegarde le choix de l'utilisateur
+        if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("darkMode", "enabled");
+            darkModeToggle.innerText = "☀️ Mode Clair";
+        } else {
+            localStorage.setItem("darkMode", "disabled");
+            darkModeToggle.innerText = "🌙 Mode Sombre";
+        }
+    });
+});
