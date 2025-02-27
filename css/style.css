@@ -10,14 +10,6 @@ body {
     padding: 0;
 }
 
-.footer-logo img {
-    width: 80px;
-    height: auto;
-    display: block;
-    margin: auto;
-    opacity: 0.8;
-}
-
 
 h1 {
     font-size: 2.5em;
@@ -50,6 +42,12 @@ nav a {
 
 nav a:hover {
     background: #ff4757;
+}
+
+nav a.active {
+    background: #ffeb3b; /* Jaune clair pour bien marquer la page actuelle */
+    color: #333; /* Texte sombre pour un bon contraste */
+    font-weight: bold;
 }
 
 .hero {
