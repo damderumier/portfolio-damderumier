@@ -169,3 +169,73 @@ nav a:hover {
 .social-links a:hover {
     color: #ff4757;
 }
+
+/* Animation */
+/* Animation du titre principal */
+@keyframes slide-in {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    animation: slide-in 0.8s ease-out;
+}
+
+/* Effet d'apparition fluide pour les sections */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    opacity: 0;
+    animation: fade-in 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+/* Animation des boutons au survol */
+.btn, .contact-form button {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.btn:hover, .contact-form button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation de la photo de profil */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.profile-img {
+    animation: bounce 2s infinite;
+}
+
+/* Animation des liens sociaux */
+.social-links a {
+    transition: transform 0.3s ease, color 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+    color: #ff4757;
+}
+
