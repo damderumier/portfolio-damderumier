@@ -425,3 +425,119 @@ input, textarea {
         height: 400px;
     }
 }
+
+/* Footer */
+footer {
+    background: var(--header-bg);
+    color: var(--text-color);
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+    text-align: left;
+}
+
+.footer-left, .footer-center, .footer-right {
+    width: 30%;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+/* Assurer une bonne visibilité des liens */
+footer a {
+    color: #ffffff; /* Blanc pour être lisible sur le fond foncé */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #ffeb3b; /* Jaune pour être plus visible */
+}
+
+/* Mode sombre - Liens en couleur adaptée */
+.dark-mode footer a {
+    color: #ff6b81; /* Rose clair pour plus de contraste */
+}
+
+.dark-mode footer a:hover {
+    color: #ffeb3b; /* Jaune pour rester visible */
+}
+
+/* Responsive pour éviter les soucis d'affichage */
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-left, .footer-center, .footer-right {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+.footer-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+/* Btn haut de page*/
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--btn-bg);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#scrollTopBtn:hover {
+    background: var(--btn-hover-bg);
+    transform: scale(1.1);
+}
+
+/* Affichage du bouton quand on scrolle */
+#scrollTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+

@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
     const title = document.querySelector("h1");
     title.addEventListener("mouseover", () => {
-        title.innerText = "👀 Tu cherches quelque chose ?";
+        title.innerText = "Tu cherches quelque chose ?";
     });
 
     title.addEventListener("mouseout", () => {
-        title.innerText = "🎉 Bienvenue sur mon portfolio !";
+        title.innerText = "Bienvenue sur mon portfolio !";
     });
 });
 
@@ -14,11 +14,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Effet rigolo sur le titre quand on passe la souris
     const title = document.querySelector("h1");
     title.addEventListener("mouseover", () => {
-        title.innerText = "👀 Hé, tu cherches quelque chose ?";
+        title.innerText = "Hé, tu cherches quelque chose ?";
     });
 
     title.addEventListener("mouseout", () => {
-        title.innerText = "🎉 Bienvenue sur mon portfolio !";
+        title.innerText = "Bienvenue sur mon portfolio !";
     });
 
     // Apparition progressive des sections
@@ -84,5 +84,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     projects.forEach(project => {
         observer.observe(project);
+    });
+});
+
+//btn haut de page
+document.addEventListener("DOMContentLoaded", () => {
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            scrollTopBtn.classList.add("show");
+        } else {
+            scrollTopBtn.classList.remove("show");
+        }
+    });
+
+    scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     });
 });
