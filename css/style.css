@@ -311,3 +311,71 @@ input, textarea {
 .dark-mode-toggle:hover {
     background: var(--btn-hover-bg);
 }
+
+/*Détail projets*/
+
+.project {
+    display: flex;
+    align-items: center;
+    background: var(--card-bg);
+    box-shadow: 0 4px 8px var(--shadow-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+.project-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.project-info {
+    flex: 1;
+    text-align: left;
+}
+
+.project-info h2 {
+    color: var(--btn-bg);
+}
+
+.project-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--btn-bg);
+    color: white;
+    padding: 8px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    background: var(--btn-hover-bg);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-img {
+        margin: 10px 0;
+    }
+}

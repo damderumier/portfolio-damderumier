@@ -68,3 +68,21 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+// Mise en page projet
+document.addEventListener("DOMContentLoaded", () => {
+    const projects = document.querySelectorAll(".project");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animation = "fade-in 0.8s ease-out forwards";
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    projects.forEach(project => {
+        observer.observe(project);
+    });
+});
