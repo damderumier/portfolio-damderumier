@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Dam Derumier</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>📬 Me Contacter</h1>
+        <p>Envie de discuter, poser une question ou juste envoyer une blague ? Fais-toi plaisir ! 😜</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="projects.html">Projets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-form">
+            <h2>📝 Envoie-moi un message</h2>
+            <form action="https://formspree.io/f/mnqlodzo" method="POST">
+                <label for="name">👤 Nom :</label>
+                <input type="text" id="name" name="name" required placeholder="Ton prénom cool ici">
+                
+                <label for="email">📧 Email :</label>
+                <input type="email" id="email" name="_replyto" required placeholder="ton.email@example.com">
+
+                <label for="message">💬 Message :</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Balance ta question, ton projet ou ta meilleure blague !"></textarea>
+
+                <button type="submit">🚀 Envoyer</button>
+            </form>
+        </section>
+
+        <section class="social-links">
+            <h2>🔗 Mes Réseaux</h2>
+            <ul>
+                <li><a href="mailto:derumier.dam@gmail.com">📧 Email</a></li>
+                <li><a href="https://www.linkedin.com/in/damderumier" target="_blank">💼 LinkedIn</a></li>
+                <li><a href="https://github.com/damderumier" target="_blank">🐙 GitHub</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Dam Derumier | <a href="index.html">Retour à l'accueil</a></p>
+    </footer>
+</body>
+</html>
