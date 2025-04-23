@@ -1,8 +1,8 @@
 /* Importation police fun et dynamique */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Nunito', sans-serif;
     background: linear-gradient(135deg, #ff9a9e, #fad0c4);
     color: #333;
     text-align: center;
