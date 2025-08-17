@@ -446,17 +446,10 @@ footer {
     text-align: left;
 }
 
-.footer-left, .footer-center, .footer-right {
-    width: 30%;
-}
-
 .footer-center {
     text-align: center;
 }
 
-.footer-right {
-    text-align: right;
-}
 
 /* Assurer une bonne visibilité des liens */
 footer a {
