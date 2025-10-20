@@ -534,3 +534,31 @@ footer a:hover {
     opacity: 1;
     visibility: visible;
 }
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+  }
+
+  nav li {
+    display: block;
+    width: calc(50% - 20px); /* 2 boutons par ligne */
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav li {
+    width: 100%; /* 1 bouton par ligne sur très petits écrans */
+  }
+}
